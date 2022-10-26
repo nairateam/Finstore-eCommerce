@@ -1,0 +1,39 @@
+.categories{
+    text-align: center;
+}
+
+.cat_wrapper{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.single_cat{
+    max-width: 14rem;
+}
+.cat_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    background: #F6F7FB;
+}
+.cat_bottom{
+    padding: 1.5rem 0.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #151875;
+    text-transform: capitalize;
+}
+
+@media (max-width: 980px) {
+    .cat_wrapper{
+        justify-content: flex-start;
+    }
+}

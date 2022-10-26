@@ -1,0 +1,42 @@
+.unique{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F1F0FF;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.unique_item > img{
+    max-width: 400px;
+}
+
+.unique_item > h4{
+    color: #151875;
+    font-size: 2rem;
+    width: 85%;
+    padding: 0.5rem 0;
+}
+
+.unique_item > p{
+    color: #ACABC3;
+    padding: 0.3rem 0;
+}
+
+.unique_item > button{
+    padding: 0.5rem 1.2rem;
+    background: #FB2E86;
+    color: #FFF;
+    border: none;
+    margin-top: 1.4rem;
+}
+
+@media (max-width: 800px) {
+    .unique{
+        flex-direction: column-reverse;
+    }
+
+    .unique_item > img{
+        display: none;
+    }
+}

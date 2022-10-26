@@ -1,0 +1,76 @@
+.shop_bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.items_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+
+.shop_widget{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.shop_widget > h3{
+    font-size: 1.5rem;
+    color: #151875;
+}
+
+.shop_widget input, select{
+    padding: 0.2rem;
+    cursor: pointer;
+    color: #151875;
+    /* color: #FFF; */
+    /* border-radius: 4px; */
+    outline: none;
+}
+
+.search_widget{
+    position: relative;
+}
+
+.search_widget > span{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.filter_widget > p{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .shop_bar{
+        padding: 0rem;
+    }
+    .shop_widget{
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .shop_widget > h3{
+        display: none;
+    }
+    .filter_widget{
+        padding-bottom: 0.5rem;
+    }
+
+    .filter_widget > p{
+        display: block;
+    }
+
+    .filter_widget > select{
+        width: 8rem;
+        background: none;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+}

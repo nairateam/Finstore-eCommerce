@@ -1,0 +1,23 @@
+.page_header{
+    background: #F6F5FF;
+    padding: 4rem;
+}
+
+.page_header > h2{
+    font-size: 2.5rem;
+    color: #101750;
+}
+
+.page_header > p{
+    padding: 0.5rem 0;
+}
+
+.page_header > p > span{
+    color: #FB2E86;
+}
+
+@media (max-width: 850px) {
+    .page_header{
+        padding: 4rem 2rem;
+    }
+}

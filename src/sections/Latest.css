@@ -1,0 +1,137 @@
+.latest{
+    text-align: center;
+}
+
+.switch_latest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 5%;
+}
+
+.switch_latest > button{
+    font-family: 'Sen', sans-serif;
+    background: none;
+    border: none;
+    color: #151875;
+    font-size: 1rem;
+}
+
+.switch_latest > button:nth-child(1){
+    color: #FB4997;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #FB4997;
+}
+
+.switch_p{
+    color: #FB4997;
+    border-bottom: 1px solid #FB4997;
+}
+
+/*  */
+
+.latest_items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.latest_wrap{
+    min-width: 16rem;
+}
+
+.list_item{
+    min-width: 10rem;
+}
+
+.latest_img{
+    position: relative;
+    padding: 2rem;
+    background: #F7F7F7;
+    width: 15rem;
+    height: 10rem;
+}
+
+.l_img{
+    position: relative;
+    padding: 2rem;
+    background: #F6F7FB;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 4px 4px 0 0;
+}
+
+.latest_img > .fs{
+    position: absolute;
+    right: 1rem;
+    top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    background: #EEEFFB;
+    color: #7E33E0;
+}
+.l_img > .fs{
+    position: absolute;
+    right: 1rem;
+    top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    background: #EEEFFB;
+    color: #7E33E0;
+}
+.latest_img > .sf{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    background: #EEEFFB;
+    color: #7E33E0;
+}
+.l_img > .sf{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    background: #EEEFFB;
+    color: #7E33E0;
+}
+.latest_info{
+    padding: 0.5rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest_info > p:nth-child(1){
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #EEEFFB;
+}
+
+.latest_info > p:nth-child(2){
+    color: #FB2448;
+}
