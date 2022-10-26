@@ -1,5 +1,6 @@
 import './Header.css'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import userIcon from '../../assets/icons/usericon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
@@ -10,7 +11,7 @@ import { useSelector } from 'react-redux'
 
 const nav__links = [
     {
-        path: 'home',
+        path: '/',
         show: 'Home'
     },
     {
@@ -57,7 +58,7 @@ const Header = ({setSearch}) => {
                         </motion.button>
                 </div>
             </div>
-            <h1><FontAwesomeIcon icon={faShop} color='#7E33E0' /> Finstore</h1>
+            <Link to='/'><h1><FontAwesomeIcon icon={faShop} color='#7E33E0' /> Finstore</h1></Link>
             <nav ref={menuBar}>
                     <motion.button
                     onClick={showMenu}

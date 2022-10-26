@@ -73,4 +73,12 @@
         border: 1px solid grey;
         border-radius: 4px;
     }
+
+    .items_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 4rem 0rem;
+        gap: 1rem;
+    }
 }

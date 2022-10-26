@@ -9,7 +9,7 @@ import ProductDetails from '../pages/ProductDetails'
 
 function Routers() {
   return <Routes>
-    <Route path='home' element={<Home />} />
+    <Route path='/' element={<Home />} />
     <Route path='shop' element={<Shop />} />
     <Route path='login' element={<Login />} />
     <Route path='cart' element={<Cart />} />

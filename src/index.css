@@ -38,3 +38,9 @@ h1, h2, h3, h4, h5, h6{
 .routed{
   padding-top: 5.5rem;
 }
+
+@media (max-width: 600px) {
+  .container{
+    padding: 2rem 1rem;
+  }
+}

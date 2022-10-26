@@ -3,10 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../store/slices/sliceCart';
+import { useState } from 'react';
 
 const LatestProducts = ({products}) => {
+
+    const [latest, setLatest] = useState(products);
 
     // const dispatch = useDispatch()
 
@@ -22,24 +26,30 @@ const LatestProducts = ({products}) => {
     //     alert('Product Added');
     // };
 
-    const filterLatest = () => {
-        if(switchP.name === "Best Seller"){
-            alert('Hello There!');
+    const filterLatest = (category) => {
+        if(category === 'All'){
+            setLatest(products);
+            return;
         }
-        alert('Jagaban')
+
+        const newLatest = products.filter((item)=> item.category === category)
+        setLatest(newLatest)
     }
 
     
 
     const switchP = [
         {
-            name: "New Arrival"
+            name: "New Arrivals",
+            cat: "All"
         },
         {
-            name: "Best Seller"
+            name: "Best Sellers",
+            cat: "sofa"
         },
         {
-            name: "Special Offer"
+            name: "Special Offer",
+            cat: "chair"
         }
     ]
 
@@ -50,13 +60,13 @@ const LatestProducts = ({products}) => {
             <div className="switch_latest">
                 {
                     switchP.map((item, index)=>(
-                        <button key={index} className='' onClick={filterLatest}> {item.name} </button>
+                        <button key={index} className='' onClick={()=>filterLatest(item.cat)}> {item.name} </button>
                     ))
                 }
             </div>
             <div className="latest_items">
                 {
-                    products.slice(0, 6).map((item, index)=>(
+                    latest.slice(0, 6).map((item, index)=>(
                         <LatestP key={index} item={item} />
                     ))
                 }
@@ -91,10 +101,12 @@ const LatestP =({item})=>{
                                 <span className='fs'><FontAwesomeIcon icon={faSearch} /></span>
                                 <span className='sf' onClick={addToCart}><FontAwesomeIcon icon={faCartPlus} /></span>
                             </motion.div>
-                            <div className="latest_info">
-                                <p>{item.title}</p>
-                                <p>${item.price}</p>
-                            </div>
+                            <Link to={`shop/${item.id}`}>
+                                <div className="latest_info">
+                                    <p>{item.title}</p>
+                                    <p>${item.price}</p>
+                                </div>
+                            </Link>
             </div>
     </>
 }
