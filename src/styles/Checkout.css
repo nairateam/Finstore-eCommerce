@@ -1,0 +1,75 @@
+
+.checkout{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner_checkout:nth-child(1){
+    width: 70%;
+}
+
+.inner_checkout > .top_form{
+    padding: 0.5rem 0;
+}
+
+.form_container{
+    background: #F8F8FD;
+    padding: 1rem;
+}
+
+.form_flex{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+.form_flex > p{
+    color: #C1C8E1;
+    font-size: 0.9rem;
+}
+
+.form_container input{
+    width: 100%;
+    background: none;
+    border: 0;
+    padding: 0.4rem 0;
+    margin-top: 0.2rem;
+    color: #000;
+    border-bottom: 1.5px solid #BFC6E0;
+}
+
+form{
+    color: #BFC6E0;
+}
+
+form > .checkbox{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    justify-content: flex-start;
+}
+
+.checkbox > input{
+    width: auto;
+    margin: 0;
+}
+
+form > button{
+    padding: 0.7rem 1.8rem;
+    border: 0;
+    background: #FB2E86;
+    color: #FFF;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 800px) {
+    .checkout{
+        flex-direction: column;
+    }
+
+    .inner_checkout:nth-child(1){
+        width: 100%;
+    }
+}

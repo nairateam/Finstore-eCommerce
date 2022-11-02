@@ -1,6 +1,6 @@
 import './Header.css'
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import userIcon from '../../assets/icons/usericon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
@@ -27,10 +27,14 @@ const nav__links = [
 const Header = ({setSearch}) => {
 
     const menuBar = useRef();
+    const navigate = useNavigate()
     const totalQuantity = useSelector(state=> state.cart.totalQuantity)
 
     const showMenu = () => {
         menuBar.current.classList.toggle('res__menu')
+    }
+    const goToCart =()=> {
+        navigate('/cart')
     }
 
     return <motion.header 
@@ -67,9 +71,9 @@ const Header = ({setSearch}) => {
                     </motion.button>
                 <ul>
                     {
-                        nav__links.map((object, index)=>(
-                            <li key={index}>
-                                <NavLink to={object.path} className={(navClass)=> navClass.isActive ? "active__nav" : ''}>{object.show}</NavLink>
+                        nav__links.map((object)=>(
+                            <li>
+                                <NavLink to={object.path} className={({ isActive })=> isActive ? "active__nav" : ''} end>{object.show}</NavLink>
                             </li>
                         ))
                     }
@@ -93,7 +97,7 @@ const Header = ({setSearch}) => {
                     <FontAwesomeIcon icon={faHeart} color='#7E33E0' />
                     <span className='item_badge'>0</span>
                 </span>
-                <span className="wish__icon">
+                <span className="wish__icon" onClick={goToCart}>
                     <FontAwesomeIcon icon={faCartShopping} color='#7E33E0' />
                     <span className='item_badge'>{totalQuantity}</span>
                 </span>

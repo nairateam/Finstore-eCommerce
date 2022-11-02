@@ -1,0 +1,90 @@
+.complete{
+    margin: 5% auto;
+    text-align: center;
+    width: 60%;
+    border-left: 1px dotted #D2D1D1;
+    border-bottom: 1px dotted #D2D1D1;
+    position: relative;
+}
+
+.complete > .clock{
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+}
+
+.complete > .clock > img{
+    width: 60px;
+}
+
+.complete > .clist{
+    position: absolute;
+    right: -2rem;
+    bottom: -2rem;
+}
+
+.complete > .clist > img{
+    width: 60px;
+}
+
+.complete > h2{
+    padding: 1rem 0;
+    color: #101750;
+}
+
+.complete > p{
+    color: #8D92A7;
+    padding: 0 10%;
+}
+
+.complete > button{
+    padding: 0.6rem 1rem;
+    margin: 2rem auto;
+    background: #FF1788;
+    color: #FFF;
+    border: none;
+    border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+    .complete{
+        margin: 10% auto;
+        text-align: center;
+        width: 60%;
+    }
+
+    .complete > p{
+        padding: 0 5%;
+    }
+
+}
+
+@media (max-width: 570px) {
+    .complete{
+        margin: 10% auto;
+        width: 70%;
+    }
+
+    .complete > p{
+        padding: 0 5%;
+    }
+
+    .complete > .clock{
+        left: -1rem;
+        top: -1rem;
+    }
+    
+    .complete > .clock > img{
+        width: 30px;
+    }
+    
+    .complete > .clist{
+        right: -1rem;
+        bottom: -1rem;
+    }
+    
+    .complete > .clist > img{
+        width: 30px;
+    }
+
+}

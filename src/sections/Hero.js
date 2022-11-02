@@ -10,13 +10,13 @@ const Hero = () => {
     return ( 
         <motion.section 
         initial={{opacity: 0, y: 100}}
-        animate={{opacity: 1, y: 0}}
-        transition={{delay: .8, duration: 1.2}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{delay: .4, duration: .9}}
         className="hero__section">
             <div className="hero__container">
                 <motion.div
                 initial={{opacity: 0, x: -200}}
-                animate={{opacity: 1, x: 0}}
+                whileInView={{opacity: 1, x: 0}}
                 transition={{delay: .4, duration: 1.2}}
                 className="hero__text">
                     <p>Best Furniture For Your Castle</p>

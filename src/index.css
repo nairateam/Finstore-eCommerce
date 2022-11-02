@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6{
   color: #151875;
 }
 
+button{
+  cursor: pointer;
+}
+
 .routed{
   padding-top: 5.5rem;
 }
